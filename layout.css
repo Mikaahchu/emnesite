@@ -1,0 +1,301 @@
+/****** hele sitet ******/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (width > 800px) {
+    max-width: 1350px;
+  }
+}
+
+.footer_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+/***** grid_1-1 *******/
+.grid_1-1 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/****** grid_1-1-1 ******/
+.grid_1-1-1 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+}
+
+/****** grid_1-1-1-1 ********/
+.grid_1-1-1-1 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+  }
+}
+
+/******* grid_1-1-1-1-1 ********/
+.grid_1-1-1-1-1 {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/****** row *******/
+.row {
+  margin-bottom: 20px;
+}
+
+/******* col *******/
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+
+/******* intro ********/
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (width > 800px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+  }
+}
+
+/****** typer af kort *********/
+.korttyper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  @media (width > 800px) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+
+    .grid_1-1 {
+      grid-template-columns: 1fr;
+      grid-template-rows: 230px auto;
+      gap: 15px;
+      align-items: start;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/****** kortets opbygning ******/
+.kort_opbygning {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+
+  @media (width > 800px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+
+    .col {
+      gap: 15px;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/****** links ******/
+.links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (width > 800px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+    .col {
+      gap: 0;
+    }
+  }
+}
+
+/***** rarity sektioner ******/
+.rarity_sektioner {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+  }
+}
+
+/****** rarity grid ******/
+.grid_rarity {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 12px;
+
+  .row {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 8px;
+    align-items: start;
+    margin-bottom: 0;
+  }
+
+  .promo {
+    grid-column: 1 / -1;
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+  }
+
+  @media (width > 800px) {
+    gap: 18px 12px;
+    align-items: start;
+
+    .row {
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .promo {
+      grid-template-columns: 42px minmax(0, 1fr) 42px;
+    }
+  }
+}
+
+/****** opbevaring ******/
+.opbevaring {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
+
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    .col {
+      gap: 20px;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .grid_1-1 {
+      gap: 15px;
+    }
+  }
+}
+
+/****** kort og værdi ******/
+.vaerdi {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+
+    .col {
+      gap: 10px;
+    }
+  }
+}
+
+/****** decks ******/
+.decks {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    .grid_1-1 {
+      gap: 15px;
+    }
+
+    .col {
+      gap: 10px;
+    }
+  }
+}
+
+/****** produkter ******/
+.produkter {
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+
+    .col {
+      gap: 10px;
+    }
+  }
+}
+
+/******* andre produkter *******/
+.andre_produkter {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .row {
+    margin-bottom: 30px;
+  }
+
+  @media (width > 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    .col {
+      gap: 20px;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .grid_1-1 {
+      gap: 15px;
+    }
+  }
+}
